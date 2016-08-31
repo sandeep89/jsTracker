@@ -1,0 +1,23 @@
+{
+  "name": "jstracker",
+  "version": "1.0.0",
+  "description": "A simple js client library which formats data as per a JSON specs while sending event logs to any analytics server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandeep89/jsTracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sandeep89/jsTracker/issues"
+  },
+  "homepage": "https://github.com/sandeep89/jsTracker#readme",
+  "dependencies": {
+    "google-closure-compiler": "^20160822.1.0",
+    "grunt": "^1.0.1"
+  }
+}

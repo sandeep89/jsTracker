@@ -12,8 +12,10 @@ function loadJSONSchema(callback) {
 	xobj.open('GET', 'schema.json', true);
 	xobj.onreadystatechange = function() {
 		if (xobj.readyState == 4 && xobj.status == "200") {
-			callback(xobj.responseText);
+			return callback(xobj.responseText);
 		}
 	};
 	xobj.send(null);
 }
+
+export default loadJSONSchema;

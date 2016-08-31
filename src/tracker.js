@@ -10,6 +10,7 @@
  * object : Entity on which event is performed (eg: doctor)
  * action: 
  */
+import loadJSONSchema from './travis';
 
 function Event(object, action, actor, platform) {
 	if (!object || !action || !actor || !platform) {
@@ -26,7 +27,7 @@ function Event(object, action, actor, platform) {
 		if (!platform) {
 			missing.push('platform');
 		}
-		var err = missing.length > 1: missing.join(',') + ' are required to log events':
+		var err = missing.length > 1 ? missing.join(',') + ' are required to log events':
 			missing[0] + ' is requried to log events';
 		return new Error(missing.join(','))
 	}
