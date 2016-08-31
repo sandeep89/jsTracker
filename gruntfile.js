@@ -11,7 +11,7 @@ grunt.initConfig({
       options: {
         compilation_level: 'SIMPLE',
         language_in: 'ECMASCRIPT6',
-        create_source_map: 'dest/output.min.js.map',
+        create_source_map: 'dist/output.min.js.map',
         output_wrapper: '(function(){\n%output%\n}).call(this)\n//# sourceMappingURL=output.min.js.map'
       }
     }
