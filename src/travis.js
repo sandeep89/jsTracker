@@ -18,4 +18,4 @@ function loadJSONSchema(callback) {
 	xobj.send(null);
 }
 
-export default loadJSONSchema;
+module.exports = loadJSONSchema;

@@ -10,9 +10,37 @@
  * object : Entity on which event is performed (eg: doctor)
  * action: 
  */
-//import loadJSONSchema from './travis';
+
+var validatorSchema = {
+	requried: {
+		object: {
+			requried: {
+				name: 'string',
+				id: 'string'
+			}
+		},
+		action: {
+			required: {
+				name: 'string'
+			}
+		},
+		actor: {
+			requried: {
+				name: 'string',
+				id: 'string'
+			}
+		},
+		platform: {
+			required: {
+				name: 'string',
+				version: 'string'
+			}
+		}
+	}
+}
 
 function Event(object, action, actor, platform, objectContext, actionContext, actorContext, platformContext) {
+	//TODO move this validator out and user the validatorSchema
 	if (!object || !action || !actor || !platform) {
 		var missing = [];
 		if (!object) {
@@ -128,3 +156,10 @@ function Tracker(config) {
 Tracker.prototype.createEvent = function(object, action, actor, platform) {
 	return new Event(object, action, actor, platform);
 };
+
+Tracker.prototype.logEvent = function(object, action, actor, platform) {
+	var sweepEvent = new Event(object, action, actor, platform);
+	sweepEvent.logEvent();
+};
+
+module.export = Tracker;
